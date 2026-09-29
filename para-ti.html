@@ -1,0 +1,2975 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <title>Para ti ♡</title>
+
+
+
+
+    <style>
+
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+
+        /* =========================
+           FONDO
+        ========================= */
+
+
+        body {
+
+
+            min-height: 100vh;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            font-family: Georgia, serif;
+
+
+            color: #f4e9e9;
+
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #3a202b,
+                    #1c1117 60%,
+                    #100b0e
+                );
+
+
+            overflow: hidden;
+
+
+            position: relative;
+        }
+
+
+
+
+        /* =========================
+           CORAZONES DEL FONDO
+        ========================= */
+
+
+        .corazon {
+
+
+            position: absolute;
+
+
+            color: rgba(202, 145, 157, 0.20);
+
+
+            font-size: 22px;
+
+
+            pointer-events: none;
+
+
+            animation:
+                flotar
+                9s linear infinite;
+        }
+
+
+
+
+        .c1 {
+            left: 10%;
+        }
+
+
+        .c2 {
+            left: 28%;
+            animation-delay: 2s;
+        }
+
+
+        .c3 {
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+
+        .c4 {
+            left: 72%;
+            animation-delay: 1s;
+        }
+
+
+        .c5 {
+            left: 90%;
+            animation-delay: 3s;
+        }
+
+
+
+
+        @keyframes flotar {
+
+
+            0% {
+
+
+                transform:
+                    translateY(110vh)
+                    rotate(0deg);
+
+
+                opacity: 0;
+            }
+
+
+
+
+            20% {
+
+
+                opacity: 1;
+            }
+
+
+
+
+            80% {
+
+
+                opacity: 1;
+            }
+
+
+
+
+            100% {
+
+
+                transform:
+                    translateY(-20vh)
+                    rotate(360deg);
+
+
+                opacity: 0;
+            }
+
+
+        }
+
+
+
+
+        /* =========================
+           TARJETA
+        ========================= */
+
+
+        .general {
+
+
+            width: 90%;
+
+
+            max-width: 600px;
+
+
+            min-height: 330px;
+
+
+            padding: 55px 35px;
+
+
+            display: flex;
+
+
+            flex-direction: column;
+
+
+            justify-content: center;
+
+
+            text-align: center;
+
+
+            background:
+                rgba(53, 32, 40, 0.88);
+
+
+            border:
+                1px solid
+                rgba(220, 180, 190, 0.15);
+
+
+            border-radius: 28px;
+
+
+            box-shadow:
+                0 25px 70px
+                rgba(0, 0, 0, 0.45);
+
+
+            backdrop-filter: blur(10px);
+
+
+            /*
+                IMPORTANTE:
+                El botón NO se moverá
+                dentro de esta tarjeta.
+            */
+            position: relative;
+
+
+            z-index: 10;
+
+
+            animation:
+                aparecer
+                1s ease;
+        }
+
+
+
+
+        @keyframes aparecer {
+
+
+            from {
+
+
+                opacity: 0;
+
+
+                transform:
+                    translateY(30px)
+                    scale(0.95);
+            }
+
+
+
+
+            to {
+
+
+                opacity: 1;
+
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+
+        }
+
+
+
+
+        /* =========================
+           ESCENAS
+        ========================= */
+
+
+        .escena {
+
+
+            animation:
+                aparecerEscena
+                0.7s ease;
+        }
+
+
+
+
+        @keyframes aparecerEscena {
+
+
+            from {
+
+
+                opacity: 0;
+
+
+                transform:
+                    translateY(15px);
+            }
+
+
+
+
+            to {
+
+
+                opacity: 1;
+
+
+                transform:
+                    translateY(0);
+            }
+
+
+        }
+
+
+
+
+        .escena h1 {
+
+
+            font-size: 2.2rem;
+
+
+            font-weight: normal;
+
+
+            color: #ead5d9;
+
+
+            margin-bottom: 25px;
+
+
+            letter-spacing: 1px;
+        }
+
+
+
+
+        .escena p {
+
+
+            font-size: 1.15rem;
+
+
+            color: #cbb5ba;
+
+
+            line-height: 1.8;
+
+
+            margin-bottom: 35px;
+        }
+
+
+
+
+        /* =========================
+           BOTÓN CONTINUAR
+        ========================= */
+
+
+        .continuar {
+
+
+            border: none;
+
+
+            padding: 13px 30px;
+
+
+            border-radius: 40px;
+
+
+            background: #c59aa5;
+
+
+            color: #24161b;
+
+
+            font-family: Georgia, serif;
+
+
+            font-size: 1rem;
+
+
+            cursor: pointer;
+
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+        }
+
+
+
+
+        .continuar:hover {
+
+
+            transform:
+                translateY(-3px);
+
+
+            background: #d1aab4;
+
+
+            box-shadow:
+                0 10px 25px
+                rgba(197, 154, 165, 0.25);
+        }
+
+
+
+
+        /* =========================
+           PREGUNTA FINAL
+        ========================= */
+
+
+        .pregunta-final {
+
+
+            animation:
+                aparecerEscena
+                0.7s ease;
+        }
+
+
+
+
+        .pregunta-final h1 {
+
+
+            font-size: 2.5rem;
+
+
+            font-weight: normal;
+
+
+            color: #ead5d9;
+
+
+            margin-bottom: 20px;
+        }
+
+
+
+
+        .pregunta-final p {
+
+
+            color: #cbb5ba;
+
+
+            margin-bottom: 35px;
+
+
+            font-size: 1.1rem;
+        }
+
+
+
+
+        /* =========================
+           RESPUESTAS
+        ========================= */
+
+
+        .respuestas {
+
+
+            display: flex;
+
+
+            justify-content: center;
+
+
+            align-items: center;
+
+
+            gap: 20px;
+
+
+            min-height: 60px;
+
+
+            position: relative;
+        }
+
+
+
+
+        button {
+
+
+            border: none;
+
+
+            border-radius: 40px;
+
+
+            padding: 14px 30px;
+
+
+            font-family: Georgia, serif;
+
+
+            font-size: 1rem;
+
+
+            cursor: pointer;
+
+
+            touch-action: none;
+
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                left 0.25s ease,
+                top 0.25s ease;
+        }
+
+
+
+
+        /* =========================
+           BOTÓN SÍ
+        ========================= */
+
+
+        #button1 {
+
+
+            background: #c59aa5;
+
+
+            color: #24161b;
+
+
+            position: relative;
+
+
+            z-index: 2;
+        }
+
+
+
+
+        #button1:hover {
+
+
+            transform:
+                scale(1.08);
+
+
+            box-shadow:
+                0 10px 25px
+                rgba(197, 154, 165, 0.3);
+        }
+
+
+
+
+        /* =========================
+           BOTÓN NO
+        ========================= */
+
+
+        #button2 {
+
+
+            background: #59434b;
+
+
+            color: #e6dadd;
+
+
+            position: relative;
+
+
+            z-index: 3;
+        }
+
+
+
+
+        /* =========================
+           FINAL
+        ========================= */
+
+
+        .final {
+
+
+            animation:
+                aparecerFinal
+                1s ease;
+        }
+
+
+
+
+        @keyframes aparecerFinal {
+
+
+            from {
+
+
+                opacity: 0;
+
+
+                transform:
+                    scale(0.7);
+            }
+
+
+
+
+            to {
+
+
+                opacity: 1;
+
+
+                transform:
+                    scale(1);
+            }
+
+
+        }
+
+
+
+
+        .final h1 {
+
+
+            font-size: 3rem;
+
+
+            font-weight: normal;
+
+
+            color: #e5b9c3;
+
+
+            margin-bottom: 20px;
+        }
+
+
+
+
+        .final p {
+
+
+            font-size: 1.4rem;
+
+
+            color: #d4c1c5;
+
+
+            line-height: 1.7;
+        }
+
+
+
+
+        .corazones-final {
+
+
+            margin-top: 30px;
+
+
+            font-size: 2rem;
+
+
+            animation:
+                latir
+                1.5s
+                ease-in-out
+                infinite;
+        }
+
+
+
+
+        @keyframes latir {
+
+
+            0%, 100% {
+
+
+                transform:
+                    scale(1);
+            }
+
+
+
+
+            50% {
+
+
+                transform:
+                    scale(1.15);
+            }
+
+
+        }
+
+
+
+
+        /* =========================
+           CORAZONES DE LA CELEBRACIÓN
+        ========================= */
+
+
+        .corazon-final {
+
+
+            position: fixed;
+
+
+            bottom: -50px;
+
+
+            color:
+                rgba(229, 185, 195, 0.75);
+
+
+            pointer-events: none;
+
+
+            z-index: 100;
+
+
+            animation-name:
+                subirCorazon;
+
+
+            animation-timing-function:
+                ease-out;
+
+
+            animation-fill-mode:
+                forwards;
+        }
+
+
+
+
+        @keyframes subirCorazon {
+
+
+            0% {
+
+
+                transform:
+                    translateY(0)
+                    rotate(0deg)
+                    scale(0.5);
+
+
+                opacity: 0;
+            }
+
+
+
+
+            15% {
+
+
+                opacity: 1;
+            }
+
+
+
+
+            70% {
+
+
+                opacity: 0.8;
+            }
+
+
+
+
+            100% {
+
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg)
+                    scale(1.2);
+
+
+                opacity: 0;
+            }
+
+
+        }
+
+
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
+
+        @media (max-width: 600px) {
+
+
+            .general {
+
+
+                min-height: 350px;
+
+
+                padding:
+                    45px
+                    22px;
+            }
+
+
+
+
+            .escena h1 {
+
+
+                font-size: 1.9rem;
+            }
+
+
+
+
+            .escena p {
+
+
+                font-size: 1rem;
+            }
+
+
+
+
+            .pregunta-final h1 {
+
+
+                font-size: 2rem;
+            }
+
+
+
+
+            .respuestas {
+
+
+                gap: 10px;
+            }
+
+
+
+
+            button {
+
+
+                padding:
+                    13px
+                    22px;
+            }
+
+
+
+
+            .final h1 {
+
+
+                font-size: 2.5rem;
+            }
+
+
+        }
+
+
+    </style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+    <!-- =========================
+         CORAZONES DEL FONDO
+    ========================== -->
+
+
+    <div class="corazon c1">♡</div>
+
+
+    <div class="corazon c2">♡</div>
+
+
+    <div class="corazon c3">♡</div>
+
+
+    <div class="corazon c4">♡</div>
+
+
+    <div class="corazon c5">♡</div>
+
+
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+
+    <section
+        class="general"
+        id="contenido"
+    >
+
+
+
+
+        <!-- ESCENA 1 -->
+
+
+        <div class="escena">
+
+
+            <h1>
+                Hey... ♡
+            </h1>
+
+
+
+
+            <p>
+
+
+                Hay algo que llevo un tiempo
+                queriendo decirte pero por las circunstancias no me he atrevido.
+
+
+            </p>
+
+
+
+
+            <button
+                class="continuar"
+                onclick="siguienteEscena()"
+            >
+
+
+                Continuar
+
+
+            </button>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <script>
+
+
+
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+
+        const contenido =
+            document.getElementById(
+                "contenido"
+            );
+
+
+
+
+        let escenaActual = 1;
+
+
+
+
+
+
+        /* =========================
+           SIGUIENTE ESCENA
+        ========================= */
+
+
+        function siguienteEscena() {
+
+
+            escenaActual++;
+
+
+
+
+            /* ESCENA 2 */
+
+
+            if (escenaActual === 2) {
+
+
+                mostrarEscena(`
+
+
+                    <h1>
+                        No sé cómo decirlo...
+                    </h1>
+
+
+
+
+                    <p>
+
+
+                        Así que pensé que sería
+                        mejor simplemente
+                        preguntártelo.
+
+
+                    </p>
+
+
+
+
+                    <button
+                        class="continuar"
+                        onclick="siguienteEscena()"
+                    >
+
+
+                        Continuar
+
+
+                    </button>
+
+
+                `);
+
+
+            }
+
+
+
+
+            /* ESCENA 3 */
+
+
+            else if (escenaActual === 3) {
+
+
+                mostrarEscena(`
+
+
+                    <h1>
+                        Pero antes... ♡
+                    </h1>
+
+
+
+
+                    <p>
+
+
+                        Quiero que sepas que en este poco tiempo que nos conocemos
+                        me haces muy feliz
+                        y que eres alguien
+                        muy especial para mí.
+
+
+                    </p>
+
+
+
+
+                    <button
+                        class="continuar"
+                        onclick="siguienteEscena()"
+                    >
+
+
+                        Continuar
+
+
+                    </button>
+
+
+                `);
+
+
+            }
+
+
+
+
+            /* ESCENA 4 */
+
+
+            else if (escenaActual === 4) {
+
+
+                mostrarEscena(`
+
+
+                    <h1>
+                        Entonces...
+                    </h1>
+
+
+
+
+                    <p>
+
+
+                        Llegó el momento
+                        de preguntártelo.
+
+
+                    </p>
+
+
+
+
+                    <button
+                        class="continuar"
+                        onclick="siguienteEscena()"
+                    >
+
+
+                        Estoy lista...
+
+
+                    </button>
+
+
+                `);
+
+
+            }
+
+
+
+
+            /* PREGUNTA FINAL */
+
+
+            else if (escenaActual === 5) {
+
+
+                mostrarPregunta();
+
+
+            }
+
+
+        }
+
+
+
+
+
+
+        /* =========================
+           MOSTRAR ESCENA
+        ========================= */
+
+
+        function mostrarEscena(texto) {
+
+
+            contenido.innerHTML = `
+
+
+                <div class="escena">
+
+
+                    ${texto}
+
+
+                </div>
+
+
+            `;
+
+
+        }
+
+
+
+
+
+
+        /* =========================
+           MOSTRAR PREGUNTA
+        ========================= */
+
+
+        function mostrarPregunta() {
+
+
+            contenido.innerHTML = `
+
+
+                <div class="pregunta-final">
+
+
+                    <h1>
+
+
+                        ¿Quieres ser mi novia? ♡
+
+
+                    </h1>
+
+
+
+
+                    <p>
+
+
+                        Solo hay una respuesta
+                        que realmente espero...
+
+
+                    </p>
+
+
+
+
+                    <div class="respuestas">
+
+
+                        <button id="button1">
+
+
+                            Sí ♡
+
+
+                        </button>
+
+
+
+
+                        <button id="button2">
+
+
+                            No
+
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            `;
+
+
+
+
+            configurarBotones();
+
+
+        }
+
+
+
+
+
+
+        /* =========================
+           CONFIGURAR BOTONES
+        ========================= */
+
+
+        function configurarBotones() {
+
+
+            const boton =
+                document.getElementById(
+                    "button2"
+                );
+
+
+
+
+            const botonsi =
+                document.getElementById(
+                    "button1"
+                );
+
+
+
+
+            /* =========================
+               MOVER BOTÓN NO
+            ========================= */
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+           function moverBoton() {
+
+
+    const tarjeta = document.querySelector(".general");
+
+
+    const margen = 15;
+
+
+    const maxX =
+        tarjeta.clientWidth -
+        boton.offsetWidth -
+        margen;
+
+
+    const maxY =
+        tarjeta.clientHeight -
+        boton.offsetHeight -
+        margen;
+
+
+    const nuevaX =
+        margen +
+        Math.random() *
+        (maxX - margen);
+
+
+    const nuevaY =
+        margen +
+        Math.random() *
+        (maxY - margen);
+
+
+
+
+    boton.style.position = "absolute";
+
+
+    boton.style.left = `${nuevaX}px`;
+
+
+    boton.style.top = `${nuevaY}px`;
+}
+
+
+
+
+            /* PC */
+
+
+            boton.addEventListener(
+                "mouseenter",
+                moverBoton
+            );
+
+
+
+
+            /* CELULAR */
+
+
+            boton.addEventListener(
+                "touchstart",
+                (event) => {
+
+
+                    event.preventDefault();
+
+
+                    moverBoton();
+
+
+                }
+            );
+
+
+
+
+            /* =========================
+               BOTÓN SÍ
+            ========================= */
+
+
+            botonsi.addEventListener(
+                "click",
+                mostrarFinal
+            );
+
+
+        }
+
+
+
+
+
+
+        /* =========================
+           CREAR CORAZONES
+        ========================= */
+
+
+        function crearCorazones() {
+
+
+
+
+            /*
+                Primera explosión:
+                muchos corazones de golpe.
+            */
+
+
+            for (
+                let i = 0;
+                i < 60;
+                i++
+            ) {
+
+
+
+
+                const corazon =
+                    document.createElement(
+                        "div"
+                    );
+
+
+
+
+                corazon.classList.add(
+                    "corazon-final"
+                );
+
+
+
+
+                corazon.innerHTML =
+                    "♡";
+
+
+
+
+                /* Posición */
+
+
+                corazon.style.left =
+                    Math.random() *
+                    100 +
+                    "%";
+
+
+
+
+                /* Tamaño */
+
+
+                const tamaño =
+                    15 +
+                    Math.random() *
+                    30;
+
+
+
+
+                corazon.style.fontSize =
+                    tamaño +
+                    "px";
+
+
+
+
+                /* Velocidad */
+
+
+                const duracion =
+                    3 +
+                    Math.random() *
+                    5;
+
+
+
+
+                corazon.style.animationDuration =
+                    duracion +
+                    "s";
+
+
+
+
+                /* Retraso */
+
+
+                corazon.style.animationDelay =
+                    Math.random() *
+                    2 +
+                    "s";
+
+
+
+
+                document.body.appendChild(
+                    corazon
+                );
+
+
+
+
+                /* Eliminar */
+
+
+                setTimeout(
+                    () => {
+
+
+                        corazon.remove();
+
+
+                    },
+
+
+                    (duracion + 2) *
+                    1000
+                );
+
+
+            }
+
+
+
+
+            /*
+                Segunda oleada de corazones.
+                Esto hace que no sea solamente
+                una explosión inicial.
+            */
+
+
+            setTimeout(
+                () => {
+
+
+                    crearCorazones();
+
+
+                },
+
+
+                2500
+            );
+
+
+        }
+
+
+
+
+
+
+        /* =========================
+           FINAL
+        ========================= */
+
+
+        function mostrarFinal() {
+
+
+
+
+            contenido.innerHTML = `
+
+
+                <div class="final">
+
+
+                    <h1>
+
+
+                        ♡ ¡YUJUUU! ♡
+
+
+                    </h1>
+
+
+
+
+                    <p>
+
+
+                        Entonces es un sí...
+                        😳❤️
+
+
+                    </p>
+
+
+
+
+                    <div class="corazones-final">
+
+
+                        ♡ &nbsp;
+                        ♥ &nbsp;
+                        ♡
+
+
+                    </div>
+
+
+                </div>
+
+
+            `;
+
+
+
+
+            /*
+                Comienza la lluvia
+                de corazones.
+            */
+
+
+            crearCorazones();
+
+
+        }
+
+
+    </script>
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
